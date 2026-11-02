@@ -1,0 +1,29 @@
+:root { color-scheme: light; --ink: #243b31; --muted: #65736a; --line: #dce3d9; --green: #315e43; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #f7f8f2; color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+.container { max-width: 1120px; margin: auto; padding: 72px 28px 24px; }
+header { max-width: 700px; margin-bottom: 58px; }
+.eyebrow { color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: .17em; }
+h1 { font-size: clamp(38px, 6vw, 64px); font-weight: 500; letter-spacing: -.055em; line-height: 1.08; margin: 20px 0; }
+p { color: var(--muted); line-height: 1.65; }
+header p { font-size: 17px; }
+.board-layout { display: grid; grid-template-columns: minmax(0, 1fr) 350px; gap: 40px; align-items: start; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+h2 { font-size: 20px; font-weight: 600; margin: 0; letter-spacing: -.03em; }
+.section-heading span { font-size: 12px; color: var(--muted); background: #e9eee4; padding: 7px 12px; border-radius: 20px; }
+.empty-state { min-height: 330px; border: 1px dashed #c6d1c0; border-radius: 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 36px; text-align: center; }
+.spark { font-size: 42px; color: #91a67c; }
+h3 { margin: 18px 0 0; font-weight: 500; font-size: 21px; letter-spacing: -.02em; }
+.empty-state p { max-width: 320px; font-size: 14px; }
+.compose { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 28px; box-shadow: 0 5px 25px #243b3104; }
+.compose > p { font-size: 13px; margin-bottom: 24px; }
+form { display: flex; flex-direction: column; }
+label { font-size: 12px; font-weight: 600; margin-bottom: 9px; }
+input, textarea { width: 100%; font: inherit; font-size: 14px; border: 1px solid var(--line); background: #fdfefb; border-radius: 7px; padding: 12px; margin-bottom: 20px; color: var(--ink); }
+textarea { resize: vertical; min-height: 120px; }
+input:focus-visible, textarea:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+button { border: 0; border-radius: 7px; padding: 14px; background: var(--green); color: white; font: inherit; font-size: 14px; display: flex; justify-content: space-between; }
+button:disabled { opacity: .65; cursor: not-allowed; }
+small { color: var(--muted); font-size: 11px; line-height: 1.5; margin-top: 13px; }
+footer { border-top: 1px solid var(--line); margin-top: 64px; padding: 22px 0; font-size: 12px; color: var(--muted); }
+@media (max-width: 760px) { .container { padding-top: 40px; } header { margin-bottom: 36px; } .board-layout { grid-template-columns: 1fr; gap: 28px; } .empty-state { min-height: 240px; } .compose { padding: 24px; } }
